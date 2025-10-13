@@ -1,8 +1,8 @@
-## Desafio AWS Step Functions
+---
 
+## Desafio AWS Step Functions
 💻 Criei este documento para registrar alguns dos ensinamentos da orquestração de processos na nuvem AWS. Poderemos observar os conceitos, anotações e insights ao criar workflows automatizados e resilientes na AWS.
 
----
 
 ## 📝 O que são Step Funcitions?
 
@@ -31,12 +31,13 @@ Os tipos de estados mais usados são:
 -**Wait**: Adiciona um atraso/espera antes de continuar;
 -**Succed/Fail**: Finaliza o processo.
 
+
 ---
+
 
 ## Desafio AWS CloudFormation.
 💻 Neste desafio, tenho o objetivo de implementar a primeira stack com AWS CloudFormation. Observaremos os conceitos, anotações sobre o assunto.
 
----
 
 ## 📝 O que é o CloudFormation?
 Nada mais é do que um conceito que auxilia na automação de criação de recursos na AWS por meio de templates JSON ou YAML. Podemos utilizar os templates quantas vezes quisermos e pagamos apenas pelas Stacks criadas (conjunto de recursos, ex: EC2, RDS, S3, etc).
