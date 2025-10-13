@@ -30,3 +30,37 @@ Os tipos de estados mais usados são:
 -**Parallel**: Executa várias etapas ao mesmo tempo;
 -**Wait**: Adiciona um atraso/espera antes de continuar;
 -**Succed/Fail**: Finaliza o processo.
+
+---
+
+## Desafio AWS CloudFormation.
+💻 Neste desafio, tenho o objetivo de implementar a primeira stack com AWS CloudFormation. Observaremos os conceitos, anotações sobre o assunto.
+
+---
+
+## 📝 O que é o CloudFormation?
+Nada mais é do que um conceito que auxilia na automação de criação de recursos na AWS por meio de templates JSON ou YAML. Podemos utilizar os templates quantas vezes quisermos e pagamos apenas pelas Stacks criadas (conjunto de recursos, ex: EC2, RDS, S3, etc).
+Além de ser um processo automatizado, conseguimos versionar estes templates. Com ele podemos criar um recurso simples como uma EC2, até uma arquitetura robusta com vários recursos.
+
+### ⚙️ Alguns dos benefícios do CloudFormation.
+- Infraestrutura em código (IaC), permitindo descrever toda a infraestrutura em arquivos de template;
+- Automação e consistência, criando e configurando recursos automaticamente, reduzindo erros humanos;
+- Gerenciamento simplificado de Stacks, sendo possível criar, atualizar e excluir grupos inteiros de recursos de uma só vez, mantendo controle sobre dependência;
+- Integração com outros serviços da AWS;
+- Reprodutibilidade e escalabilidade, facilitando o provisionamento de múltiplos ambientes iguais.
+
+### 🤖 Estrutura do CloudFormation.
+Ele tem uma estrutura bem definida com seções específicas, algumas obrigatórias e outras opcionais.
+
+Podemos das um exemplo bem básico de como seria o template do CloudFormation.
+
+```yaml
+AWSTemplateFormatVersion: "2010-09-09"  #(opcional)
+Description: "Criação de uma instância EC2 simples"  #(opcional)
+
+Resources:                               #(obrigatório)
+  EC2Instance:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: "meu-bucket-exemplo-cloudformation"
+```
