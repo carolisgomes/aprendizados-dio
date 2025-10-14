@@ -65,3 +65,26 @@ Resources:                               #(obrigatório)
     Properties:
       BucketName: "meu-bucket-exemplo-cloudformation"
 ```
+
+---
+
+## Infraestrutura automatizada com AWS CloudFormations
+
+📝 Como já foi citado anteriormente, o CloudFormation é um serviço que facilita a modelagem e configuração de recursos na AWS. Com ele, podemos criar modelos que descrevem os recursos necessários, como instâncias EC2 ou bancos de dados RDS, automatizando seu provisionamento e configurações. Com o CloudFormation, nós eliminamos a necessidade de configurar recursos manualmente, permitindo que foquemos no desenvolvimento e gestão dos aplicativos.
+
+Um exemplo de template simples para provisionar um bucket S3:
+
+```
+AWSTemplateFormatVersion: "2010-09-09"  #(opcional)
+Description: "Exemplo de stack simples no CloudFormation"  #(opcional)
+
+Resources:                               #(obrigatório)
+  MeuPrimeiroBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: "meu-bucket-exemplo-cloudformation"
+```
+
+---
+
+
