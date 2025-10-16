@@ -87,4 +87,15 @@ Resources:                               #(obrigatório)
 
 ---
 
+## Automatizando infraestruturas com Lambda Function e Amazon S3
 
+📝 O que podemos levar em consideração sobre cada um dos serviços.
+
+### ⚙️ Amazon S3
+É um serviço de armazenamento em nuvem da AWS que permite "armazenar e acessar" dados de forma segura e escalável. Ele suporta qualquer tipo de arquivo, sejam vídeos, áudios, imagens, etc. E é considerado ideal para backup e armazenamento de objeto.
+
+### ⚙️ AWS Lambda
+É um serviço de computação serveless que permite executar código em resposta a eventos, sem a necessidade de gerenciar servidores. Basta fazer o upload do código e o Lambda se encarrega de executar automaticamente, escalando conforme a demanda.
+
+### ⚙️ Integração S3 + Lambda
+A integração funciona com um arquivo sendo enviado ao bucket S3, esse evento dispara a execução da Lambda Function configura e logo em seguida a função pode processar o arquivo, validando, transformando, movendo, registrando em um banco como o DynamoDB.
